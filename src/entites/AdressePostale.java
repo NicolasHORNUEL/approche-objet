@@ -2,12 +2,10 @@ package entites;
 
 public class AdressePostale {
 
-	public static void main(String[] args) {
-		int numeroRue;
-		String libelleRue;
-		int codePostal;
-		String ville;
+		public int numeroRue;
+		public String libelleRue;
+		public int codePostal;
+		public String ville;
 
-	}
 
 }
