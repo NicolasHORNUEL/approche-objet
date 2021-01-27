@@ -6,6 +6,10 @@ public class AdressePostale { //public pour être visible dans d'autre package
 		public String libelleRue;
 		public int codePostal;
 		public String ville;
+		
+		public AdressePostale() {
+			
+		}
 
 		public AdressePostale(int num, String lib, int cp, String v) {
 			numeroRue = num;
@@ -16,7 +20,7 @@ public class AdressePostale { //public pour être visible dans d'autre package
 
 		@Override
 		public String toString() {
-			return " " + numeroRue + ", " + libelleRue + " - "
+			return numeroRue + "," + libelleRue + " - "
 					+ codePostal + " " + ville + ".";
 		}
 
