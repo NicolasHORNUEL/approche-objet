@@ -17,6 +17,8 @@ public class TestAdressePostale {
 		ap2.libelleRue = "d'Antrain";
 		ap2.codePostal = 35700;
 		ap2.ville = "Rennes";
+		
+		System.out.println(ap1); // affiche l'adresse mémoire
 	}
 
 }
