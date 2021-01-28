@@ -5,9 +5,9 @@ public class Compte {
 		private int numCompte;
 		private double soldeCompte;
 		
-		public Compte(int n, double s) {
-			numCompte = n;
-			soldeCompte = s;	
+		public Compte(int numCompte, double soldeCompte) {
+			this.numCompte = numCompte;
+			this.soldeCompte = soldeCompte;
 		}
 
 		public int getNumCompte() {
@@ -31,3 +31,4 @@ public class Compte {
 			return "N° du Compte : " + numCompte + ". Solde du Compte : " + soldeCompte + "€";
 		}
 }
+
