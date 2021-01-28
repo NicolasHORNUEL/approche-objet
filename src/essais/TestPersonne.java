@@ -55,12 +55,12 @@ public class TestPersonne {
 		System.out.println("-------------------------------------");
 		
 		p3.getPersonne();
-		p3.getAdresse();
+		System.out.println(p3.getAdresse());
 		p3.setNom("LECLERC");
 		p3.setPrenom("Philippe");
 		p3.setAdresse(ap3);
 		p3.getPersonne();
-		p3.getAdresse();
+		System.out.println(p3.getAdresse());
 		
 		
 	}

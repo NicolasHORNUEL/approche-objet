@@ -35,14 +35,14 @@ public class Personne {
 	public void getPersonne() {
 		System.out.println(nom.toUpperCase() + " " + prenom);
 	}
-	public void getNom() {
-		System.out.println(nom.toUpperCase());
+	public String getNom() {
+		return nom;
 	}
-	public void getPrenom() {
-		System.out.println(prenom);
+	public String getPrenom() {
+		return prenom;
 	}
-	public void getAdresse() {
-		System.out.println(adressePostale);
+	public AdressePostale getAdresse() {
+		return adressePostale;
 	}
 	
 	@Override // click right + source + generate toString()
