@@ -22,30 +22,28 @@ public class TestVille {
 
 		int popMax = 0;
 		String ville = null;
+		// City with maximum population
 		for (int i = 0; i < liste1.size(); i++) {
 			if (liste1.get(i).getNbHabitant() > popMax) {
 				popMax = liste1.get(i).getNbHabitant();
 				ville = liste1.get(i).getNom();
 			}
 		}
-		System.out.println(ville + " est la ville la plus peuplée.");
-		
-		Iterator<Ville> iter = liste1.iterator();
-		while (iter.hasNext()) {
-			Ville vil = (Ville) iter.next();
-			if (vil.getNbHabitant() < popMax) {
-				popMax = vil.getNbHabitant();
+		System.out.println(ville + " est la ville la plus peuplée.");		
+		// Population minimum
+		for (int i = 0; i < liste1.size(); i++) {
+			if (liste1.get(i).getNbHabitant() < popMax) {
+				popMax = liste1.get(i).getNbHabitant();
 			}
 		}
-		Iterator<Ville> ite = liste1.iterator();
-		while (ite.hasNext()) {
-			Ville vi = (Ville) ite.next();
-			if (vi.getNbHabitant() >= 100000) {
-				String v = vi.getNom().toUpperCase();
-				vi.setNom(v);
-			}
-			if (vi.getNbHabitant() == popMax) {
-				ite.remove();
+		// Remove iterator whose pop is minimum
+		Iterator<Ville> iterator = liste1.iterator();
+		while (iterator.hasNext()) {
+			Ville v = (Ville) iterator.next();
+			if (v.getNbHabitant() == popMax) {
+				iterator.remove();
+			} else if (v.getNbHabitant() >= 100000) {
+				v.setNom(v.getNom().toUpperCase());
 			}
 		}
 		System.out.println(liste1);
