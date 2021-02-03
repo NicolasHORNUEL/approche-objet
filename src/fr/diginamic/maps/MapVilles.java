@@ -31,6 +31,7 @@ public class MapVilles {
 		int min = Integer.MAX_VALUE;
 		String minKey = null;
 		Iterator<String> iterCles = map1.keySet().iterator();
+		//Iterator<Integer> iterCles = map1.values().iterator();
 		while(iterCles.hasNext()) {
 			String cleCourante = iterCles.next();
 			Ville valeurCourante = map1.get(cleCourante);
