@@ -11,23 +11,21 @@ public class Ville implements Comparable<Ville> {
 	}
 
 	@Override
-	public int compareTo(Ville other) {		
-		// Je veux faire un tri sur le nb d'habitants
-		// si ma ville courante a plus d'habitants que "other" je retourne 1
-		// si other a plus d'habitants : je retourne -1
-		// si les 2 villes ont le même nb d'habitants: je retourne 0
+	public int compareTo(Ville other) {	
+		// sort with name
+		//return this.nom.compareTo(other.getNom());
+		// sort with nbHabitant
 		if (this.nbHabitant > other.getNbHabitant()) {
 			return 1;
-		} else if (this.nbHabitant > other.getNbHabitant()) {
+		} else if (this.nbHabitant < other.getNbHabitant()) {
 			return -1;
 		}
-			return 0;
-			//return this.nom.compareTo(other.getNom());
+		return 0;
 	}
-	
+
 	@Override
 	public String toString() {
-		return nom ;
+		return "Ville [nom=" + nom + ", nbHabitant=" + nbHabitant + "]\n";
 	}
 
 	public String getNom() {
@@ -45,10 +43,5 @@ public class Ville implements Comparable<Ville> {
 	public void setNbHabitant(int nbHabitant) {
 		this.nbHabitant = nbHabitant;
 	}
-
-
-
-	
-	
 
 }
