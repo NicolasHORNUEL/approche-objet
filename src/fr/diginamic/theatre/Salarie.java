@@ -1,4 +1,4 @@
-package fr.diginamic.geometrie.entites;
+package fr.diginamic.theatre;
 
 public class Salarie {
 

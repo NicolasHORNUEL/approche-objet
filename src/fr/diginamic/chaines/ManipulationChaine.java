@@ -1,6 +1,6 @@
 package fr.diginamic.chaines;
 
-import fr.diginamic.geometrie.entites.Salarie;
+import fr.diginamic.theatre.Salarie;
 
 public class ManipulationChaine {
 

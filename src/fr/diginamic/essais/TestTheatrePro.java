@@ -1,6 +1,6 @@
 package fr.diginamic.essais;
 
-import fr.diginamic.geometrie.entites.Spectacle;
+import fr.diginamic.theatre.Spectacle;
 import fr.diginamic.theatre.TheatrePro;
 
 public class TestTheatrePro {
