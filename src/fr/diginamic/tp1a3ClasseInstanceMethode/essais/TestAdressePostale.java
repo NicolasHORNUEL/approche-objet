@@ -1,6 +1,6 @@
-package essais;
+package fr.diginamic.tp1a3ClasseInstanceMethode.essais;
 
-import entites.AdressePostale; // import nomdupackage.NomClasse;
+import fr.diginamic.tp1a3ClasseInstanceMethode.entites.AdressePostale;
 
 public class TestAdressePostale {
 

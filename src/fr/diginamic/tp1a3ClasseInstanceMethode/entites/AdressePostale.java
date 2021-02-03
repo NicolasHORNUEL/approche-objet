@@ -1,4 +1,4 @@
-package entites;
+package fr.diginamic.tp1a3ClasseInstanceMethode.entites;
 
 public class AdressePostale { //public pour être visible dans d'autre package
 

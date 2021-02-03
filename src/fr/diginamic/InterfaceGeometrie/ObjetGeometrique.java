@@ -1,7 +1,7 @@
 /**
  * 
  */
-package tpInterfaceGeometrie;
+package fr.diginamic.InterfaceGeometrie;
 
 /** Liste les méthodes obligatoires que doit posséder un objet géométrique
  * @author Nicolas

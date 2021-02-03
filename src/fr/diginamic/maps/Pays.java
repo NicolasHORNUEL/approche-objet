@@ -1,20 +1,15 @@
-package listes;
+package fr.diginamic.maps;
 
-public class Ville {
+public class Pays {
 
 	private String nom;
 	private int nbHabitant;
+	private String continent;
 	
-	public Ville(String nom, int nbHabitant) {
+	public Pays(String nom, int nbHabitant, String continent) {
 		this.nom = nom;
 		this.nbHabitant = nbHabitant;
-	}
-
-	
-	
-	@Override
-	public String toString() {
-		return nom ;
+		this.continent = continent;
 	}
 
 	public String getNom() {
@@ -32,7 +27,15 @@ public class Ville {
 	public void setNbHabitant(int nbHabitant) {
 		this.nbHabitant = nbHabitant;
 	}
-	
-	
 
+	public String getContinent() {
+		return continent;
+	}
+
+	public void setContinent(String continent) {
+		this.continent = continent;
+	}
+	
+	
+	
 }

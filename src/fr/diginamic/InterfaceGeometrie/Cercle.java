@@ -1,4 +1,4 @@
-package tpInterfaceGeometrie;
+package fr.diginamic.InterfaceGeometrie;
 
 public class Cercle implements ObjetGeometrique {
 

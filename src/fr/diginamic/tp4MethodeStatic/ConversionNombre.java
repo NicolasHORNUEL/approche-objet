@@ -1,4 +1,4 @@
-package utils;
+package fr.diginamic.tp4MethodeStatic;
 
 import java.lang.Integer;
 
