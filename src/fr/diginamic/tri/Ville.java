@@ -11,9 +11,18 @@ public class Ville implements Comparable<Ville> {
 	}
 
 	@Override
-	public int compareTo(Ville o) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compareTo(Ville other) {		
+		// Je veux faire un tri sur le nb d'habitants
+		// si ma ville courante a plus d'habitants que "other" je retourne 1
+		// si other a plus d'habitants : je retourne -1
+		// si les 2 villes ont le même nb d'habitants: je retourne 0
+		if (this.nbHabitant > other.getNbHabitant()) {
+			return 1;
+		} else if (this.nbHabitant > other.getNbHabitant()) {
+			return -1;
+		}
+			return 0;
+			//return this.nom.compareTo(other.getNom());
 	}
 	
 	@Override
