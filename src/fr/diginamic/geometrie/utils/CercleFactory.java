@@ -1,6 +1,6 @@
-package fr.diginamic.utils;
+package fr.diginamic.geometrie.utils;
 
-import fr.diginamic.entites.Cercle;
+import fr.diginamic.geometrie.entites.Cercle;
 
 public class CercleFactory {
 

@@ -1,7 +1,7 @@
 package fr.diginamic.essais;
 
-import fr.diginamic.entites.Spectacle;
-import fr.diginamic.entites.TheatrePro;
+import fr.diginamic.geometrie.entites.Spectacle;
+import fr.diginamic.theatre.TheatrePro;
 
 public class TestTheatrePro {
 

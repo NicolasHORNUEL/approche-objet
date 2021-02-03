@@ -1,4 +1,6 @@
-package fr.diginamic.entites;
+package fr.diginamic.theatre;
+
+import fr.diginamic.geometrie.entites.Spectacle;
 
 public class TheatrePro {
 

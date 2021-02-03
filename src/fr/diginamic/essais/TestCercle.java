@@ -1,7 +1,7 @@
 package fr.diginamic.essais;
 
-import fr.diginamic.entites.Cercle;
-import fr.diginamic.utils.CercleFactory;
+import fr.diginamic.geometrie.entites.Cercle;
+import fr.diginamic.geometrie.utils.CercleFactory;
 
 public class TestCercle {
 

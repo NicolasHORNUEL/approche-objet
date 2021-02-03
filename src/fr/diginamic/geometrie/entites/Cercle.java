@@ -1,4 +1,4 @@
-package fr.diginamic.entites;
+package fr.diginamic.geometrie.entites;
 
 public class Cercle {
 
