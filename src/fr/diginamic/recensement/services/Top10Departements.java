@@ -16,7 +16,7 @@ public class Top10Departements extends MenuService {
 	@Override
 	public void traiter(Recensement recensement, Scanner scanner) {
 		
-		// COMPTEUR
+		// INSTANCE D'UN COMPTEUR DE POPULATION PAR CODE DEPARTEMENT DANS UNE HASHMAP
 		List<Ville> liste = recensement.getLinesOutput();
 		HashMap<String, Integer> mapNbDepartement = new HashMap<String, Integer>();
 		for (int i = 0; i < liste.size(); i++) {
@@ -29,16 +29,20 @@ public class Top10Departements extends MenuService {
 			}
 			mapNbDepartement.put(nom, compteur);
 		}		
-		// INSTANCIATION
-		List<Departement> departements = new ArrayList<>();
+		
+		// ITERATION DE LA MAP POUR INSTANCIER UNE LISTE D'OBJETS DEPARTEMENT
 		Iterator<String> iterCles = mapNbDepartement.keySet().iterator();
+		List<Departement> departements = new ArrayList<>();
 		while(iterCles.hasNext()) {
 			String nom = iterCles.next();
 			Integer compteur = mapNbDepartement.get(nom);
 			departements.add(new Departement(nom, compteur));
 		}
-		// TRI PUIS SELECTION
+		
+		// TRI DE LA NOUVELLE LISTE D'OBJETS DEPARTEMENT AVEC L'INTERFACE COMPARABLE
 		Collections.sort(departements);
+		
+		// AFFICHAGE SELECTIF
 		System.out.println("Voici les 10 départements les plus peuplées de France :");
 		for (int i = 0; i < 10; i++) {
 			System.out.println(departements.get(i).getCodeDepartement());

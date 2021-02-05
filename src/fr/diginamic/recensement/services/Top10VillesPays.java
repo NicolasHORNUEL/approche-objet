@@ -12,9 +12,13 @@ public class Top10VillesPays  extends MenuService {
 	@Override
 	public void traiter(Recensement recensement, Scanner scanner) {
 		
-		// TRI LA LISTE EXISTANTE
+		// OBTENIR LA LISTE EXISTANTE
 		List<Ville> liste = recensement.getLinesOutput();
+		
+		// TRI DE LA LISTE D'OBJETS VILLE AVEC L'INTERFACE COMPARABLE
 		Collections.sort(liste);
+		
+		// AFFICHAGE SELECTIF
 		System.out.println("Voici les 10 villes les plus peuplées de France : ");
 		for (int i = 0; i < 10; i++) {
 			System.out.println(liste.get(i).getNomCommune());

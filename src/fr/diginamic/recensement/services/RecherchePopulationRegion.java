@@ -10,17 +10,22 @@ public class RecherchePopulationRegion extends MenuService {
 
 	@Override
 	public void traiter(Recensement recensement, Scanner scanner) {		
+		
+		// CHOIX DU NOM DE LA REGION
 		scanner.nextLine();
 		System.out.print("Saisir une région : ");
-		List<Ville> liste = recensement.getLinesOutput();
 		String nomRegion = scanner.nextLine();
+		
+		// PARCOURS DE LA LISTE POUR TROUVER LES OBJETS VILLE, D'UN NOM DE REGION DONNE PUIS CUMUL DES POPULATIONS ASSOCIEES
+		List<Ville> liste = recensement.getLinesOutput();
 		int popRegion = 0;
-		for (int i = 0; i < liste.size(); i++) {
-			Ville ville = liste.get(i);	
+		for (Ville ville : liste) {
 			if (ville.getNomRegion().equals(nomRegion)) {
 				popRegion += ville.getPopCommune();
 			}
 		}
+		
+		// AFFICHAGE DU RESULTAT
 		System.out.println("La Population de la région " + nomRegion + " est de " + popRegion + " habitants.");
 	}
 	

@@ -18,19 +18,20 @@ public class Top10VillesRegion  extends MenuService {
 		System.out.print("Saisir une région : ");
 		String nomRegion = scanner.nextLine();
 		
-		// INSTANCIER TOUTES LES VILLES D'UNE REGION DONNE
+		// AJOUTER LES OBJETS VILLE DE LA REGION CHOISIE DANS UNE NOUVELLE LISTE
 		List<Ville> liste = recensement.getLinesOutput();
 		List<Ville> newliste = new ArrayList<>();
-		for (int i = 0; i < liste.size(); i++) {
-			Ville vil = liste.get(i);
-			String dep = vil.getNomRegion();
+		for (Ville ville : liste) {
+			String dep = ville.getNomRegion();
 			if (dep.equals(nomRegion)) {
-				newliste.add(vil);
+				newliste.add(ville);
 			}
 		}
 		
-		// TRI DE LA NOUVELLE LISTE
+		// TRI DE LA NOUVELLE LISTE D'OBJETS VILLE AVEC L'INTERFACE COMPARABLE
 		Collections.sort(newliste);
+		
+		// AFFICHAGE SELECTIF
 		System.out.print("Voici les 10 villes les plus peuplées de la région ");
 		System.out.println(nomRegion + " :");
 		for (int i = 0; i < 10; i++) {

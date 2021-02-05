@@ -9,17 +9,23 @@ import fr.diginamic.recensement.entites.Ville;
 public class RecherchePopulationVille extends MenuService {
 
 	@Override
-	public void traiter(Recensement recensement, Scanner scanner) {		
+	public void traiter(Recensement recensement, Scanner scanner) {	
+		
+		// CHOIX DU NOM DE LA VILLE
 		scanner.nextLine();
 		System.out.print("Saisir une ville : ");
-		List<Ville> liste = recensement.getLinesOutput();
 		String nomVille = scanner.nextLine();
+		
+		// PARCOURS DE LA LISTE POUR TROUVER UN OBJET VILLE, SELON UN NOM PUIS OBTENIR LA POPULATION ASSOCIEE
+		List<Ville> liste = recensement.getLinesOutput();
 		int popVille = 0;
-		for (int i = 0; i < liste.size(); i++) {
-			if (liste.get(i).getNomCommune().equals(nomVille)) {
-				popVille = liste.get(i).getPopCommune();
+		for (Ville ville : liste) {
+			if (ville.getNomCommune().equals(nomVille)) {
+				popVille = ville.getPopCommune();
 			}	
 		}
+		
+		// AFFICHAGE DU RESULTAT
 		System.out.println("La Population de " + nomVille + " est de " + popVille + " habitants.");		
 	}
 

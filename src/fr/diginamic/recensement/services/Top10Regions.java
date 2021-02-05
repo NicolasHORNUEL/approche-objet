@@ -16,7 +16,7 @@ public class Top10Regions extends MenuService {
 	@Override
 	public void traiter(Recensement recensement, Scanner scanner) {	
 		
-		// COMPTEUR
+		// INSTANCE D'UN COMPTEUR DE POPULATION PAR NOM DE REGION DANS UNE HASHMAP
 		List<Ville> liste = recensement.getLinesOutput();
 		HashMap<String, Integer> mapNbRegion = new HashMap<String, Integer>();
 		for (int i = 0; i < liste.size(); i++) {
@@ -29,16 +29,20 @@ public class Top10Regions extends MenuService {
 			}
 			mapNbRegion.put(nom, compteur);
 		}		
-		// INSTANCIATION
-		List<Region> regions = new ArrayList<>();
+		
+		// ITERATION DE LA MAP POUR INSTANCIER UNE LISTE D'OBJETS REGION
 		Iterator<String> iterCles = mapNbRegion.keySet().iterator();
+		List<Region> regions = new ArrayList<>();
 		while(iterCles.hasNext()) {
 			String nom = iterCles.next();
 			Integer compteur = mapNbRegion.get(nom);
 			regions.add(new Region(nom, compteur));
 		}
-		// TRI PUIS SELECTION
+		
+		// TRI DE LA NOUVELLE LISTE D'OBJETS REGION AVEC L'INTERFACE COMPARABLE
 		Collections.sort(regions);
+		
+		// AFFICHAGE SELECTIF
 		System.out.println("Voici les 10 régions les plus peuplées de France : ");
 		for (int i = 0; i < 10; i++) {
 			System.out.println(regions.get(i).getNomRegion());

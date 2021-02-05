@@ -17,10 +17,10 @@ public class Application {
 
 	public static void main(String[] args) throws IOException {
 		
-		//INSTANCIER TOUTES LES VILLES DU FICHIER DANS UNE NOUVELLE LISTE
+		// INSTANCIER TOUTES LES VILLES DU FICHIER DANS UNE NOUVELLE LISTE
 		Recensement recensement = new Recensement("../../recensement.csv");
 		
-		//AFFICHAGE DU MENU
+		// AFFICHAGE DU MENU
 		String menu = 
 				"MENU RECENSEMENT :" + "\n" +
 				"------------------------------------------------------------" + "\n" +
@@ -37,11 +37,11 @@ public class Application {
 				"Choisir une option : ";
 		System.out.print(menu);
 		
-		//OUVERTURE DU SCANNER
+		// OUVERTURE DU SCANNER
 		Scanner scanner = new Scanner(System.in);
 		int choix = scanner.nextInt();
 		
-		//INTERACTION ET AFFICHAGE RESULTAT SELON LE CHOIX DE L'UTILISATEUR
+		// INTERACTION ET AFFICHAGE RESULTAT SELON LE CHOIX DE L'UTILISATEUR
 		while (choix != 9) {
 			switch (choix) {
 			case 1 :
@@ -82,7 +82,7 @@ public class Application {
 			}
 			System.out.println("------------------------------------------------------------");
 			System.out.print("RETOUR MENU Y/N : ");
-			scanner.nextLine();
+			//scanner.nextLine();
 			String retourMenu = scanner.nextLine();
 			if (retourMenu.equals("Y")) {
 				System.out.println();
@@ -95,7 +95,7 @@ public class Application {
 	
 		}
 		
-		//FERMETURE DU SCANNER
+		// FERMETURE DU SCANNER
 	    scanner.close();
 	    System.err.println("SORTIE" );
 		
