@@ -8,8 +8,20 @@ import java.util.Scanner;
 import fr.diginamic.recensement.entites.Recensement;
 import fr.diginamic.recensement.entites.Ville;
 
-public class Top10VillesRegion  extends MenuService {
+/**
+ * @author nicolas
+ * Cette classe hérite d'une classe et méthode abstraite.
+ * C'est une classe de service.
+ * Elle permet d'afficher les 10 villes les plus peuplées d'une région.
+ */
+public class Top10VillesRegion extends MenuService {
 
+	/**
+	 * Redefinition de méthode.
+	 * Signature identique à la méthode mère.
+	 * @param recensement est une liste d'objet Ville
+	 * @param scanner est une instance de la classe java.util.Scanner
+	 */
 	@Override
 	public void traiter(Recensement recensement, Scanner scanner) {
 		

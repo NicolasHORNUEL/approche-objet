@@ -13,8 +13,17 @@ import fr.diginamic.recensement.services.Top10VillesDepartement;
 import fr.diginamic.recensement.services.Top10VillesPays;
 import fr.diginamic.recensement.services.Top10VillesRegion;
 
+/**
+ * @author nicolas
+ * Classe exécutable.
+ */
 public class Application {
 
+	/**
+	 * @param args
+	 * @throws IOException
+	 * Méthode main.
+	 */
 	public static void main(String[] args) throws IOException {
 		
 		// INSTANCIER TOUTES LES VILLES DU FICHIER DANS UNE NOUVELLE LISTE
