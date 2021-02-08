@@ -7,8 +7,7 @@ public class TestDates {
 
 	public static void main(String[] args) {
 
-		// java.util.Date constructeur deprecated
-		@Deprecated // annotation permettant de générer le message javadoc
+		// java.util.Date
 		// année à partir de 1900
 		// mois à partir de 0
 		// jour
@@ -17,14 +16,16 @@ public class TestDates {
 		// seconde
 		Date jDate = new Date();
 		// java.text.SimpleDateFormat
-		SimpleDateFormat formatage = new SimpleDateFormat("dd/MMMM/yyyy");
+		SimpleDateFormat formatage = new SimpleDateFormat("dd/MM/yyyy");
 		// invoquer la méthode de conversion Date vers String
 		String jString = formatage.format(jDate);
 		// Affichage de la String
 		System.out.println(jString);
 		
+		// constructeur deprecated
+		@Deprecated // annotation permettant de générer le message javadoc
 		Date jDate2 = new Date(116, 4, 19, 23, 59, 30);
-		SimpleDateFormat formatage2 = new SimpleDateFormat("yyyy/MMMM/dd HH:mm:ss");
+		SimpleDateFormat formatage2 = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		String jString2 = formatage2.format(jDate2);
 		System.out.println(jString2);
 		
