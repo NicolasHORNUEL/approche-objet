@@ -8,9 +8,10 @@ public class TestStringBuilder {
 		StringBuilder builder = new StringBuilder();
 		String s = null;
 		for (int i = 1; i < 100_000; i++) {
-			//builder.append(i); // 28 millisecondes
-			String iString = Integer.toString(i);
-			s += iString; // 9524 millisecondes	
+			builder.append(i); // 19 millisecondes
+			//s += i;
+			//String iString = Integer.toString(i);
+			//s += iString; // 9524 millisecondes	
 		}
 		long fin = System.currentTimeMillis();
 		System.out.println("Temps écoulé en millisecondes :" + (fin - debut));
