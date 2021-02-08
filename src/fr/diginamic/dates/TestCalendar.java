@@ -22,21 +22,17 @@ public class TestCalendar {
 		String jString2 = formatage2.format(jDate2);
 		System.out.println(jString2);
 		
-		SimpleDateFormat formatage3 = new SimpleDateFormat("yyyy/MMMM/EEEE HH:mm:ss", Locale.CHINA);
-		String jString3 = formatage3.format(jDate2);
-		System.out.println(jString3);
-		
-		SimpleDateFormat formatage4 = new SimpleDateFormat("yyyy/MMMM/EEEE HH:mm:ss", new Locale("ru"));	
-		String jString4 = formatage4.format(jDate2);
-		System.out.println(jString4);
-		
-		SimpleDateFormat formatage5 = new SimpleDateFormat("yyyy/MMMM/EEEE HH:mm:ss", Locale.GERMANY);	
-		String jString5 = formatage5.format(jDate2);
-		System.out.println(jString5);
-		
-		SimpleDateFormat formatage6 = new SimpleDateFormat("yyyy/MMMM/EEEE HH:mm:ss", Locale.FRANCE);	
-		String jString6 = formatage6.format(jDate2);
-		System.out.println(jString6);
+		Locale[] localite = new Locale[] {
+				Locale.FRANCE,
+				Locale.CHINA,
+				new Locale("ru"),
+				Locale.GERMANY
+		};		
+		for (Locale locale : localite) {
+			SimpleDateFormat formatagel = new SimpleDateFormat("yyyy/MMMM/EEEE HH:mm:ss", locale);
+			String jStringl = formatagel.format(jDate2);
+			System.out.println(jStringl);
+		}
 
 	}
 
